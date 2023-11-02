@@ -124,7 +124,7 @@ function load_more_posts() {
             endif;
             echo '<div class="card-body">';
             echo '<h5 class="card-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>';
-            echo '<p class="card-text">' . get_the_excerpt() . '</p>';
+            echo '<p class="card-text">' . wp_trim_words( get_the_excerpt(), 25, '...' ) . '</p>';
             echo '<p class="text-muted"><small>By ' . get_the_author() . ' on ' . get_the_time('F j, Y') . '</small></p>';
             echo '</div>';
             echo '</div>';
@@ -140,5 +140,21 @@ add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');  // For non-log
 add_action('wp_ajax_load_more_posts', 'load_more_posts');  // For logged in users
 
 // Your existing code
+
+function custom_excerpt_length($length) {
+    if (is_page_template('template-blog.php')) {
+        return 25;  // Sets excerpt length to 25 words for the blog page template
+    }
+    return $length;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+function custom_excerpt_more($more) {
+    if (is_page_template('template-blog.php')) {
+        return '...';  // Sets the continuation indicator to ellipsis for the blog page template
+    }
+    return $more;
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
 
 ?>

@@ -50,7 +50,7 @@ Template Name: Blog Page
     </div>
 
     <!-- Recent Posts -->
-    <div class="row mb-5 recent-posts-container">
+    <div class="row mb-5 recent-posts-container" id="recent-posts-grid">
         <?php
         // Standard loop for most recent posts
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -68,7 +68,9 @@ Template Name: Blog Page
                     <?php endif; ?>
                     <div class="card-body">
                         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <p class="card-text"><?php the_excerpt(); ?></p>
+                        <p class="card-text">
+                            <?php echo wp_trim_words( get_the_excerpt(), 25, '...' ); ?>
+                        </p>
                         <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
                     </div>
                 </div>

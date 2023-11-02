@@ -103,4 +103,42 @@ add_action( 'wp_ajax_submit_free_analysis_form', 'handle_free_analysis_form_subm
 
 // Your existing code (if any) goes here
 
+// Your existing code
+
+function load_more_posts() {
+    $paged = $_POST['page'] + 1;  // Get the next page number
+    $args = array(
+        'posts_per_page' => 8,
+        'paged' => $paged,
+    );
+    $recent_posts = new WP_Query($args);
+
+    if ($recent_posts->have_posts()) : 
+        while ($recent_posts->have_posts()) : 
+            $recent_posts->the_post();
+            // Output post markup
+            echo '<div class="col-md-3 mb-4">';
+            echo '<div class="card">';
+            if (has_post_thumbnail()) :
+                echo '<img src="' . get_the_post_thumbnail_url() . '" class="card-img-top" alt="' . get_the_title() . '">';
+            endif;
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>';
+            echo '<p class="card-text">' . get_the_excerpt() . '</p>';
+            echo '<p class="text-muted"><small>By ' . get_the_author() . ' on ' . get_the_time('F j, Y') . '</small></p>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo '<p>No more posts to load.</p>';
+    endif;
+    wp_die();
+}
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');  // For non-logged in users
+add_action('wp_ajax_load_more_posts', 'load_more_posts');  // For logged in users
+
+// Your existing code
+
 ?>

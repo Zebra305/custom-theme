@@ -50,7 +50,7 @@ Template Name: Blog Page
     </div>
 
     <!-- Recent Posts -->
-    <div class="row mb-5">
+    <div class="row mb-5 recent-posts-container">
         <?php
         // Standard loop for most recent posts
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -79,7 +79,7 @@ Template Name: Blog Page
     <!-- Load More Button -->
     <div class="row text-center">
         <div class="col-12">
-            <button type="button" class="btn btn-primary">Load More</button>
+            <button type="button" class="btn btn-primary btn-load-more" data-page="1">Load More</button>
         </div>
     </div>
 </section>

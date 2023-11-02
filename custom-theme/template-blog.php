@@ -25,6 +25,7 @@ Template Name: Blog Page
                     <div class="card-body">
                         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                         <p class="card-text"><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-primary float-end mt-auto">Read More</a>
                         <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
                     </div>
                 </div>
@@ -72,6 +73,7 @@ Template Name: Blog Page
                             <?php echo wp_trim_words( get_the_excerpt(), 25, '...' ); ?>
                         </p>
                         <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
+                        <a href="<?php the_permalink(); ?>" class="btn btn-primary float-end mt-auto">Read More</a>
                     </div>
                 </div>
             </div>
@@ -87,3 +89,4 @@ Template Name: Blog Page
 </section>
 
 <?php get_footer(); ?>
+

@@ -126,6 +126,7 @@ function load_more_posts() {
             echo '<h5 class="card-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>';
             echo '<p class="card-text">' . wp_trim_words( get_the_excerpt(), 25, '...' ) . '</p>';
             echo '<p class="text-muted"><small>By ' . get_the_author() . ' on ' . get_the_time('F j, Y') . '</small></p>';
+            echo '<a href="' . get_the_permalink() . '" class="btn btn-primary float-end mt-auto">Read More</a>';
             echo '</div>';
             echo '</div>';
             echo '</div>';

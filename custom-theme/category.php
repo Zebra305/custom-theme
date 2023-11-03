@@ -31,7 +31,7 @@
                         <?php endif; ?>
                         <div class="card-body">
                             <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            <p class="card-text"><?php the_excerpt(); ?></p>
+                            <p class="card-text"><?php echo wp_trim_words( get_the_excerpt(), 25, '...' ); ?></p>
                             <a href="<?php the_permalink(); ?>" class="btn btn-primary float-end mt-auto">Read More</a>
                             <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
                         </div>
@@ -73,7 +73,7 @@
                                 <?php endif; ?>
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                                    <p class="card-text"><?php the_excerpt(); ?></p>
+                                    <p class="card-text"><?php echo wp_trim_words( get_the_excerpt(), 25, '...' ); ?></p>
                                     <a href="<?php the_permalink(); ?>" class="btn btn-primary float-end mt-auto">Read More</a>
                                     <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
                                 </div>

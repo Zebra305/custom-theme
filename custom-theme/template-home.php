@@ -142,7 +142,7 @@ Template Name: Home Page
     </div>
     <div class="row text-center">
         <div class="col-12">
-            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="btn btn-primary">View All Posts</a>
+            <a href="http://mindmagnetmedia.local/blog/" class="btn btn-primary">View All Posts</a>
         </div>
     </div>
 </section>

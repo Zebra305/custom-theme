@@ -158,4 +158,44 @@ function custom_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
+function load_more_child_category_posts() {
+    $paged = $_POST['page'] + 1;  // Get the next page number
+    $category_id = $_POST['category'];  // Get the category ID from the AJAX request
+
+    $args = array(
+        'post_type' => 'post',
+        'cat' => $category_id,
+        'paged' => $paged,
+        'posts_per_page' => 5,  // Adjust this value to control the number of posts loaded
+    );
+    $child_category_posts = new WP_Query($args);
+
+    if ($child_category_posts->have_posts()) : 
+        while ($child_category_posts->have_posts()) : 
+            $child_category_posts->the_post();
+            // Output post markup
+            echo '<div class="col-md-3 mb-4">';
+            echo '<div class="card">';
+            if (has_post_thumbnail()) :
+                echo '<img src="' . get_the_post_thumbnail_url() . '" class="card-img-top" alt="' . get_the_title() . '">';
+            endif;
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5>';
+            echo '<p class="card-text">' . wp_trim_words( get_the_excerpt(), 25, '...' ) . '</p>';
+            echo '<p class="text-muted"><small>By ' . get_the_author() . ' on ' . get_the_time('F j, Y') . '</small></p>';
+            echo '<a href="' . get_the_permalink() . '" class="btn btn-primary float-end mt-auto">Read More</a>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo '<p>No more posts to load.</p>';
+    endif;
+    wp_die();
+}
+add_action('wp_ajax_nopriv_load_more_child_category_posts', 'load_more_child_category_posts');  // For non-logged in users
+add_action('wp_ajax_load_more_child_category_posts', 'load_more_child_category_posts');  // For logged in users
+
+
 ?>

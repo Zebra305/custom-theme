@@ -50,6 +50,23 @@ Template Name: Blog Page
         </div>
     </div>
 
+    <!-- Category Navigation -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <?php
+            $categories = get_categories(array(
+                'parent' => 0,  // Ensures that only top-level categories are fetched
+                'exclude' => 1,   // Excludes the 'Uncategorized' category
+            ));
+            foreach ($categories as $category) {
+                echo '<a href="' . get_category_link($category->term_id) . '" class="btn btn-primary me-2 mb-2">' . $category->name . '</a>';
+            }
+            ?>
+        </div>
+    </div>
+
+
+
     <!-- Recent Posts -->
     <div class="row mb-5 recent-posts-container" id="recent-posts-grid">
         <?php

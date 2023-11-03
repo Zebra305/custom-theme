@@ -55,6 +55,34 @@ Template Name: Home Page
     </div>
 </div>
 <section class="container my-5">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-8">
+            <h1>Your Marketing Solution</h1>
+            <p>Discover how we can help grow your business. Fill out the form to learn more.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ctaForm">
+                Get Started
+            </button>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="ctaForm" tabindex="-1" aria-labelledby="ctaFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ctaFormLabel">Inquiry Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Your form goes here -->
+                <form id="cta-form">
+                    <!-- ... -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="container my-5">
     <div class="row text-center">
         <div class="col-12">
             <h2>Our Services</h2>
@@ -69,6 +97,8 @@ Template Name: Home Page
                 <div class="card-body">
                     <h5 class="card-title">Service 1</h5>
                     <p class="card-text">Description of Service 1.</p>
+                    <!-- Learn More button -->
+                    <a href="/services/copywriting" class="btn btn-primary float-end">Learn More</a>
                 </div>
             </div>
         </div>
@@ -78,6 +108,8 @@ Template Name: Home Page
                 <div class="card-body">
                     <h5 class="card-title">Service 2</h5>
                     <p class="card-text">Description of Service 2.</p>
+                    <!-- Learn More button -->
+                    <a href="/services/service2" class="btn btn-primary float-end">Learn More</a>
                 </div>
             </div>
         </div>
@@ -87,6 +119,8 @@ Template Name: Home Page
                 <div class="card-body">
                     <h5 class="card-title">Service 3</h5>
                     <p class="card-text">Description of Service 3.</p>
+                    <!-- Learn More button -->
+                    <a href="/services/service3" class="btn btn-primary float-end">Learn More</a>
                 </div>
             </div>
         </div>
@@ -99,11 +133,15 @@ Template Name: Home Page
                 <div class="card-body">
                     <h5 class="card-title">Service 4</h5>
                     <p class="card-text">Description of Service 4.</p>
+                    <!-- Learn More button -->
+                    <a href="/services/service4" class="btn btn-primary float-end">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ... Remaining code ... -->
+
 <section class="container my-5">
     <div class="row text-center">
         <div class="col-12">

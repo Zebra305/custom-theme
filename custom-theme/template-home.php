@@ -54,34 +54,7 @@ Template Name: Home Page
         </div>
     </div>
 </div>
-<section class="container my-5">
-    <div class="row justify-content-center text-center">
-        <div class="col-md-8">
-            <h1>Your Marketing Solution</h1>
-            <p>Discover how we can help grow your business. Fill out the form to learn more.</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ctaForm">
-                Get Started
-            </button>
-        </div>
-    </div>
-</section>
 
-<div class="modal fade" id="ctaForm" tabindex="-1" aria-labelledby="ctaFormLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ctaFormLabel">Inquiry Form</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Your form goes here -->
-                <form id="cta-form">
-                    <!-- ... -->
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <section class="container my-5">
     <div class="row text-center">
         <div class="col-12">

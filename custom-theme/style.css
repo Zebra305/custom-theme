@@ -36,14 +36,8 @@ Text Domain: your-theme-name
 }
 
 /* Navbar Styles */
-.nav-link {
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.navbar-nav .nav-link {
-    color: white !important;
-    text-decoration: none !important;
+#menu-menu-1 .menu-item a {
+    color: white;
 }
 
 

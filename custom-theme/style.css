@@ -38,7 +38,22 @@ Text Domain: your-theme-name
 /* Navbar Styles */
 #menu-menu-1 .menu-item a {
     color: white;
+    text-decoration: none;
+}
+/* Mobile view */
+@media (max-width: 768px) {
+    #menu-menu-1 .menu-item {
+        padding-right: 2%; /* adjust as needed */
+        padding-left: 2%; /* adjust as needed */
+    }
 }
 
+/* Desktop view */
+@media (min-width: 769px) {
+    #menu-menu-1 .menu-item {
+        padding-right: 1%; /* adjust as needed */
+        padding-left: 1%; /* adjust as needed */
+    }
+}
 
 /* Additional styles can be added below this line */

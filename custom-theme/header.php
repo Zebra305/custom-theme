@@ -14,16 +14,25 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'header-menu',
-                        'container'      => false,
-                        'menu_class'     => 'navbar-nav ms-auto mb-2 mb-lg-0 px-3',
-                        'fallback_cb'    => '__return_false',
-                        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth'          => 2,
-                    ) );
-                    ?>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="<?php echo esc_url(home_url('/services/')); ?>" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services <i class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="<?php echo esc_url(home_url('/services/seo/')); ?>">SEO</a></li>
+                                <li><a class="dropdown-item" href="<?php echo esc_url(home_url('/services/webdevelopment/')); ?>">Web Development</a></li>
+                                <li><a class="dropdown-item" href="<?php echo esc_url(home_url('/services/social-media/')); ?>">Social Media</a></li>
+                                <li><a class="dropdown-item" href="<?php echo esc_url(home_url('/services/copywriting/')); ?>">Copywriting</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo esc_url(home_url('/blog/')); ?>">Blog</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

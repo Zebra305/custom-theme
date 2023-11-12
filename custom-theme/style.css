@@ -35,6 +35,20 @@ Text Domain: your-theme-name
     --bs-dark: #343a40;
 }
 
+/* Dropdown Menu Styles */
+.navbar .dropdown-menu {
+    background-color: var(--bs-purple); /* Change to your preferred background color */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--bs-white); /* Change to your preferred text color */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--bs-purple); /* Change for hover background color */
+    color: #B2ABBF; /* Change for hover text color */
+}
+
 /* Navbar Styles */
 .navbar-dark .navbar-nav .nav-link {
     color: var(--bs-white); 

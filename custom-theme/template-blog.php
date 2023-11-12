@@ -32,7 +32,7 @@ Template Name: Blog Page
             <?php endwhile; wp_reset_postdata(); endif; ?>
         </div>
         <div class="col-md-6">
-            <ul class="list-group">
+            <div class="row">
                 <?php
                 // Query for right featured posts
                 $featured_right = new WP_Query(array(
@@ -41,12 +41,17 @@ Template Name: Blog Page
                 ));
 
                 if ($featured_right->have_posts()) : while ($featured_right->have_posts()) : $featured_right->the_post(); ?>
-                    <li class="list-group-item">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
-                    </li>
+                    <div class="col-md-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                <p class="text-muted"><small>By <?php the_author(); ?> on <?php the_time('F j, Y'); ?></small></p>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-primary float-end mt-auto">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 <?php endwhile; wp_reset_postdata(); endif; ?>
-            </ul>
+            </div>
         </div>
     </div>
 

@@ -5,9 +5,6 @@ function enqueue_custom_scripts_and_styles() {
     // Enqueue Bootstrap CSS
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null );
     
-    // Enque style.css file
-    wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/style.css', array(), null );
-
     // Enqueue Bootstrap JavaScript
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), null, true );
 
@@ -16,6 +13,10 @@ function enqueue_custom_scripts_and_styles() {
 
     // Localize script for AJAX URL
     wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
+    // Enque style.css file
+    wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/style.css', array(), null );
+
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_scripts_and_styles' );
 

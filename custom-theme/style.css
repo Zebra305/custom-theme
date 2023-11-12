@@ -12,21 +12,21 @@ Text Domain: your-theme-name
 
 /* Custom Color Scheme */
 :root {
-    --bs-blue: #0d6efd;
+    --bs-blue: #4232C5; /* palatinate blue */
     --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
+    --bs-purple: #5C0029; /* Tyrian purple */
     --bs-pink: #d63384;
     --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
+    --bs-orange: #FE9000; /* princeton orange */
     --bs-yellow: #ffc107;
-    --bs-green: #198754;
+    --bs-green: #40C9A2; /* Mint */
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
+    --bs-white: #F1E8B8; /* white */
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
+    --bs-primary: var(--bs-purple); /* primary */
+    --bs-secondary: var(--bs-purple); /* secondary */
     --bs-success: #198754;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
@@ -36,10 +36,67 @@ Text Domain: your-theme-name
 }
 
 /* Navbar Styles */
-#menu-menu-1 .menu-item a {
-    color: white;
-    text-decoration: none;
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--bs-white); 
 }
+.navbar.bg-primary {
+    background-color: var(--bs-purple) !important; /* Palatinate Blue */
+}
+.navbar-dark .navbar-brand {
+    color: var(--bs-white); /* Example: Green color */
+}
+
+
+body {
+    background-color: var(--bs-white); /* Palatinate Blue */
+    color: var(--bs-purple);
+}
+
+.card {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+
+}
+
+.card:hover{
+
+    box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2) !important; /* Bootstrap's shadow style */
+    
+    transform: scale(1.05); /* Adjust scale value for desired effect */
+    
+}
+/*
+purp: 5C0029
+vanil: F1E8B8
+walnut brown: 696047
+rose quartz: B2ABBF
+bright pink crayola: DB6C79
+*/
+
+body .card .card-title a {
+    font-weight: bold;
+    color: var(--bs-white) !important; /* Using the walnut brown color */
+    text-decoration: none !important;
+}
+
+.card-body small {
+    color: var(--bs-white); /* Replace with your desired color */
+    /* Add any additional styling here */
+}
+
+
+
+.btn-primary {
+    background-color: #B2ABBF; /* Replace with your chosen color */
+    border-color: #B2ABBF; /* Replace with your chosen color */
+    color: #5C0029; /* Replace with your chosen text color */
+}
+.btn-primary:hover {
+    background-color: #696047; /* Replace with your chosen color */
+    border-color: #696047; /* Replace with your chosen color */
+    color: #F1E8B8; /* Replace with your chosen text color */
+}
+
 /* Mobile view */
 @media (max-width: 768px) {
     #menu-menu-1 .menu-item {

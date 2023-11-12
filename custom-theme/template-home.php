@@ -77,58 +77,62 @@ Template Name: Home Page
 </div>
 
 <section class="container my-5">
-    <div class="row text-center">
-        <div class="col-12">
-            <h2>Our Services</h2>
-            <p>Discover the wide range of services we offer to help grow your business.</p>
-        </div>
-    </div>
-    <div class="row">
-        <!-- First Row of Services -->
-        <div class="col-md-6 mb-4">
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service1.jpg" class="card-img-top" alt="Service 1">
-                <div class="card-body">
-                    <h5 class="card-title">Service 1</h5>
-                    <p class="card-text">Description of Service 1.</p>
-                    <!-- Learn More button -->
-                    <a href="/services/copywriting" class="btn btn-primary float-end">Learn More</a>
+    <div class="card custom-parent-card"> <!-- Add this wrapper with a custom class -->
+        <div class="card-body"> <!-- Card body for padding and content alignment -->
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2>Our Services</h2>
+                    <p>Discover the wide range of services we offer to help grow your business.</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service2.jpg" class="card-img-top" alt="Service 2">
-                <div class="card-body">
-                    <h5 class="card-title">Service 2</h5>
-                    <p class="card-text">Description of Service 2.</p>
-                    <!-- Learn More button -->
-                    <a href="/services/service2" class="btn btn-primary float-end">Learn More</a>
+            <div class="row">
+                <!-- First Row of Services -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/service1.jpg" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 1</h5>
+                            <p class="card-text">Description of Service 1.</p>
+                            <!-- Learn More button -->
+                            <a href="/services/copywriting" class="btn btn-primary float-end">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/service2.jpg" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 2</h5>
+                            <p class="card-text">Description of Service 2.</p>
+                            <!-- Learn More button -->
+                            <a href="/services/service2" class="btn btn-primary float-end">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Second Row of Services -->
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service3.jpg" class="card-img-top" alt="Service 3">
-                <div class="card-body">
-                    <h5 class="card-title">Service 3</h5>
-                    <p class="card-text">Description of Service 3.</p>
-                    <!-- Learn More button -->
-                    <a href="/services/service3" class="btn btn-primary float-end">Learn More</a>
+            <!-- Second Row of Services -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/service3.jpg" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 3</h5>
+                            <p class="card-text">Description of Service 3.</p>
+                            <!-- Learn More button -->
+                            <a href="/services/service3" class="btn btn-primary float-end">Learn More</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-4">
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/service4.jpg" class="card-img-top" alt="Service 4">
-                <div class="card-body">
-                    <h5 class="card-title">Service 4</h5>
-                    <p class="card-text">Description of Service 4.</p>
-                    <!-- Learn More button -->
-                    <a href="/services/service4" class="btn btn-primary float-end">Learn More</a>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/service4.jpg" class="card-img-top" alt="Service 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 4</h5>
+                            <p class="card-text">Description of Service 4.</p>
+                            <!-- Learn More button -->
+                            <a href="/services/service4" class="btn btn-primary float-end">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,6 +231,16 @@ Template Name: Home Page
         </div>
     </div>
 </section> -->
+
+<script>
+    document.getElementById('website').addEventListener('blur', function(event) {
+        var input = event.target;
+        if (input.value && !input.value.startsWith('http://') && !input.value.startsWith('https://')) {
+            input.value = 'http://' + input.value;
+        }
+    });
+</script>
+
 
 
 <?php get_footer(); ?>

@@ -118,6 +118,14 @@ rose quartz: B2ABBF
 bright pink crayola: DB6C79
 */
 
+.custom-parent-card {
+    background-color: var(--bs-white) !important; /* Choose a different background color */
+    border: 1px solid var(--bs-purple) !important; /* Optional border */
+    color: var(--bs-purple) !important;
+    /* Add more custom styling as needed */
+}
+
+
 body .card .card-title a {
     font-weight: bold;
     color: var(--bs-white) !important; /* Using the walnut brown color */

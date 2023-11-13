@@ -2,14 +2,27 @@
 // Your existing code (if any) goes here
 
 function enqueue_custom_scripts_and_styles() {
+
     // Enqueue Bootstrap CSS
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null );
     
     // Enqueue Bootstrap JavaScript
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), null, true );
 
+    // Enqueue Google Fonts first
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Numans&family=Assistant:wght@400;600&family=Scope+One&display=swap', false );
+
     // Enqueue custom AJAX script
     wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/ajax.js', array('jquery'), null, true );
+
+    // Enqueue AOS CSS
+    wp_enqueue_style('aos-css', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css', array(), null);
+
+    // Enqueue AOS JavaScript
+    wp_enqueue_script('aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', array(), null, true);
+
+    // Enqueue Typed.js library
+    wp_enqueue_script('typed-js', 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12', array(), null, true);
 
     // Localize script for AJAX URL
     wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );

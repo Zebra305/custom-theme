@@ -114,3 +114,31 @@ jQuery(document).on('click', '.btn-load-more-child-category', function(event) {
     });
 });
 // ... your existing code ...
+// Initialize Typed.js for the About Us section
+jQuery(document).ready(function($) {
+    if ($('#typed-target').length) {  // Check if the target element exists
+        console.log("Initializing Typed.js");  // Add this line for debugging
+
+        var typed = new Typed('#typed-target', {
+            strings: ["Who we are and what we can do for you:"], // Add more strings as needed
+            typeSpeed: 20,
+            backSpeed: 50,
+            backDelay: 1500,
+            startDelay: 500,
+            loop: false,
+            showCursor: false,
+            onComplete: function(){
+                if ($('#typed-about-us-content').length) {
+                    var typedContent = new Typed('#typed-about-us-content', {
+                        strings: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas viverra faucibus sagittis. Duis nec fringilla leo. Donec posuere sem nec dolor bibendum mattis. Suspendisse potenti. Morbi ut mauris risus. Proin sit amet ex consequat, lobortis lorem et, molestie nisl."], // Replace with your actual content
+                        typeSpeed: 10, // Adjust type speed as needed
+                        startDelay: 100, // Delay before content typing starts
+                        loop: false,
+                        showCursor: false
+                    });
+                }
+            }
+        });
+    }
+
+});

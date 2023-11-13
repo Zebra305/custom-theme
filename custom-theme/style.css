@@ -57,12 +57,16 @@ Text Domain: your-theme-name
     background-color: #B2ABBF; /* Button background color */
     border-color: #B2ABBF; /* Button border color */
     color: #5C0029; /* Button text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 #cta-form .btn-primary:hover {
     background-color: #696047; /* Hover background color */
     border-color: #696047; /* Hover border color */
     color: #F1E8B8; /* Hover text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -143,33 +147,45 @@ body .card .card-title a {
     background-color: #B2ABBF; /* Replace with your chosen color */
     border-color: #B2ABBF; /* Replace with your chosen color */
     color: #5C0029; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 .btn-primary:hover {
     background-color: #696047; /* Replace with your chosen color */
     border-color: #696047; /* Replace with your chosen color */
     color: #F1E8B8; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 .btn-secondary {
     background-color: #B2ABBF; /* Replace with your chosen color */
     border-color: #B2ABBF; /* Replace with your chosen color */
     color: #5C0029; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 .btn-secondary:hover {
     background-color: #696047; /* Replace with your chosen color */
     border-color: #696047; /* Replace with your chosen color */
     color: #F1E8B8; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 .btn-primary:disabled {
     background-color: #696047; /* Replace with your chosen color */
     border-color: #696047; /* Replace with your chosen color */
     color: #F1E8B8; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 .btn-primary:disabled:hover {
     background-color: #696047; /* Replace with your chosen color */
     border-color: #696047; /* Replace with your chosen color */
     color: #F1E8B8; /* Replace with your chosen text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 /* Mobile view */
 @media (max-width: 768px) {
@@ -186,5 +202,26 @@ body .card .card-title a {
         padding-left: 1%; /* adjust as needed */
     }
 }
+
+/* Google Fonts Styling */
+h1 {
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600; /* Semi-bold for subtitles */
+}
+
+p {
+    font-family: 'Scope One', serif;
+}
+
+h5 {
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
+}
+
 
 /* Additional styles can be added below this line */

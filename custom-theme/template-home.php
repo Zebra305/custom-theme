@@ -72,7 +72,7 @@ Template Name: Home Page
 </div>
 
 <section class="container my-5" data-aos="slide-up">
-    <div class="card custom-parent-card"> <!-- Add this wrapper with a custom class -->
+    <div class="card custom-parent-card "> <!-- Add this wrapper with a custom class -->
         <div class="card-body"> <!-- Card body for padding and content alignment -->
             <div class="row text-center">
                 <div class="col-12">

@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
         console.log("Initializing Typed.js");  // Add this line for debugging
 
         var typed = new Typed('#typed-target', {
-            strings: ["Who we are and what we can do for you:"], // Add more strings as needed
+            strings: ["Our offer"], // Add more strings as needed
             typeSpeed: 20,
             backSpeed: 50,
             backDelay: 1500,

@@ -80,27 +80,39 @@ Text Domain: your-theme-name
 
 /* Dropdown Menu Styles */
 .navbar .dropdown-menu {
-    background-color: var(--bs-purple); /* Change to your preferred background color */
+    background-color: var(--bs-white); /* Change to your preferred background color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 .navbar .dropdown-menu .dropdown-item {
-    color: var(--bs-white); /* Change to your preferred text color */
+    color: var(--bs-purple); /* Change to your preferred text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: var(--bs-purple); /* Change for hover background color */
+    background-color: var(--bs-white); /* Change for hover background color */
     color: #B2ABBF; /* Change for hover text color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 /* Navbar Styles */
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--bs-white); 
+    color: var(--bs-purple); 
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 .navbar.bg-primary {
-    background-color: var(--bs-purple) !important; /* Palatinate Blue */
+    background-color: var(--bs-white) !important; /* Palatinate Blue */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 .navbar-dark .navbar-brand {
-    color: var(--bs-white); /* Example: Green color */
+    color: var(--bs-purple); /* Example: Green color */
+    font-family: 'Numans', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -110,8 +122,10 @@ body {
 }
 
 .card {
-    background-color: var(--bs-primary) !important;
-    color: var(--bs-white) !important;
+    background-color: var(--bs-white) !important;
+    color: var(--bs-purple) !important;
+    border: 1px solid var(--bs-purple) !important; /* Optional border */
+
 
 }
 
@@ -152,16 +166,17 @@ body .card .card-title a {
 
 
 .btn-primary {
-    background-color: #B2ABBF; /* Replace with your chosen color */
-    border-color: #B2ABBF; /* Replace with your chosen color */
-    color: #5C0029; /* Replace with your chosen text color */
+    background-color: #696047; /* Replace with your chosen color */
+    border-color: #696047; /* Replace with your chosen color */
+    color: #F1E8B8; /* Replace with your chosen text color */
     font-family: 'Numans', sans-serif;
     font-weight: bold;
 }
 .btn-primary:hover {
-    background-color: #696047; /* Replace with your chosen color */
-    border-color: #696047; /* Replace with your chosen color */
-    color: #F1E8B8; /* Replace with your chosen text color */
+
+    background-color: #B2ABBF; /* Replace with your chosen color */
+    border-color: #B2ABBF; /* Replace with your chosen color */
+    color: #5C0029; /* Replace with your chosen text color */
     font-family: 'Numans', sans-serif;
     font-weight: bold;
 }

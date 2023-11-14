@@ -154,12 +154,16 @@ bright pink crayola: DB6C79
 
 body .card .card-title a {
     font-weight: bold;
-    color: var(--bs-white) !important; /* Using the walnut brown color */
+    color: var(--bs-purple) !important; /* Using the walnut brown color */
     text-decoration: none !important;
+    font-family: 'Numans', sans-serif !important;
+    font-weight: bold !important;
 }
 
 .card-body small {
-    color: var(--bs-white); /* Replace with your desired color */
+    color: var(--bs-purple); /* Replace with your desired color */
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600; /* Semi-bold for subtitles */
     /* Add any additional styling here */
 }
 
@@ -242,7 +246,7 @@ p {
 }
 
 h5 {
-    font-family: 'Numans', sans-serif;
+    font-family: 'Numans ', sans-serif;
     font-weight: bold;
 }
 
